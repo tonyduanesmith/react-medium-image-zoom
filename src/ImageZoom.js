@@ -171,7 +171,6 @@ export default class ImageZoom extends Component {
         <div style={styles.center}>
           <div style={styles.image}>
             <img
-              style={styles.imageEle}
               key="image"
               ref={x => {
                 this.image = x
@@ -179,6 +178,7 @@ export default class ImageZoom extends Component {
               onLoad={this._handleLoad}
               {...attrs}
               onError={() => this.setState({ imageError: true })}
+              style={styles.imageEle}
             />
           </div>
           {!this.state.imageLoaded &&

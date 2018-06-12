@@ -611,7 +611,6 @@ var ImageZoom = function (_Component) {
       var isZoomed = isControlled(this.props.isZoomed) ? this.props.isZoomed : this.state.isZoomed;
 
       return [_react2.default.createElement(_react.Fragment, { key: '1' }, _react2.default.createElement('div', { style: styles.center }, _react2.default.createElement('div', { style: styles.image }, _react2.default.createElement('img', _extends({
-        style: styles.imageEle,
         key: 'image',
         ref: function ref(x) {
           _this2.image = x;
@@ -620,7 +619,8 @@ var ImageZoom = function (_Component) {
       }, attrs, {
         onError: function onError() {
           return _this2.setState({ imageError: true });
-        }
+        },
+        style: styles.imageEle
       }))), !this.state.imageLoaded && !this.state.imageError && _react2.default.createElement('div', { style: styles.centerI }, _react2.default.createElement(_CircularProgress2.default, { size: 48 })), this.state.imageError && _react2.default.createElement('div', { style: styles.centerIcon }, _react2.default.createElement(_BrokenImage2.default, { style: { width: 48, height: 48, color: _grey2.default[300] } })))), this.image && (isZoomed || this.isClosing) ? _react2.default.createElement(_EventsWrapper2.default, {
         key: 'portal',
         ref: function ref(node) {
