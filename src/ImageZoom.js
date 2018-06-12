@@ -106,7 +106,7 @@ export default class ImageZoom extends Component {
 
     const imageTransition = {
       opacity: !this.state.imageLoaded ? 0 : 1,
-      width: !this.state.imageLoaded ? '0px' : '100%',
+      width: !this.state.imageLoaded ? '0px' : '300px',
       filterBrightness: !this.state.imageLoaded ? 0 : 100,
       filterSaturate: !this.state.imageLoaded ? 20 : 100,
       transition:
