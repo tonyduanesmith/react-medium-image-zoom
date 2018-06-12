@@ -167,6 +167,7 @@ export default class ImageZoom extends Component {
         <div style={styles.center}>
           <div style={styles.image}>
             <img
+              style={{ width: '300px' }}
               key="image"
               ref={x => {
                 this.image = x

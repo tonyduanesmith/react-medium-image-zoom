@@ -107,7 +107,7 @@ var App = function (_Component) {
               { style: { height: '500px' } },
               _react2.default.createElement(_lib2.default, {
                 image: {
-                  src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_4009420e28.jpg',
+                  src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/101020982_400975123.jpg',
                   alt: 'Picture of Mt. Cook in New Zealand',
                   className: 'img'
                 }
@@ -607,6 +607,7 @@ var ImageZoom = function (_Component) {
       var isZoomed = isControlled(this.props.isZoomed) ? this.props.isZoomed : this.state.isZoomed;
 
       return [_react2.default.createElement(_react.Fragment, { key: '1' }, _react2.default.createElement('div', { style: styles.center }, _react2.default.createElement('div', { style: styles.image }, _react2.default.createElement('img', _extends({
+        style: { width: '300px' },
         key: 'image',
         ref: function ref(x) {
           _this2.image = x;

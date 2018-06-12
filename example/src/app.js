@@ -47,7 +47,7 @@ class App extends Component {
           <ImageZoom
             image={{
               src:
-                'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_4009420e28.jpg',
+                'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/101020982_400975123.jpg',
               alt: 'Picture of Mt. Cook in New Zealand',
               className: 'img',
             }}
