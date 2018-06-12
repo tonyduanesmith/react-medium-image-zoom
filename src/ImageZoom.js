@@ -124,7 +124,8 @@ export default class ImageZoom extends Component {
         height: '100%',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        objectFit: 'contain',
       },
       centerIcon: {
         position: 'absolute',

@@ -17,20 +17,15 @@ class App extends Component {
               subheader="subheader"
             >
             </CardHeader>
+          <div style={{ height: '500px' }}>
           <ImageZoom
             image={{
               src: 'http://lorempixel.com/400/200/sports/1',
               alt: 'Golden Gate Bridge',
               className: 'img',
-                style: { height: '300px' }
-            }}
-            zoomImage={{
-              src: 'http://lorempixel.com/400/200/sports/1',
-              alt: 'Golden Gate Bridge',
-              className: 'img--zoomed',
-              style: { height: '300px' }
             }}
           />
+          </div>
             <CardContent>
               <Typography component="p">TD ID: </Typography>
               <Typography component="p">Printer: </Typography>
@@ -48,21 +43,16 @@ class App extends Component {
               subheader="subheader"
             >
             </CardHeader>
+          <div style={{ height: '500px' }}>
           <ImageZoom
             image={{
               src:
                 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_4009420e28.jpg',
               alt: 'Picture of Mt. Cook in New Zealand',
               className: 'img',
-              style: { height: '300px' }
-            }}
-            zoomImage={{
-              src:
-                'http://brokenlink.jpg',
-              alt: 'Golden Gate Bridge',
-              className: 'img--zoomed'
             }}
           />
+          </div>
             <CardContent>
               <Typography component="p">TD ID: </Typography>
               <Typography component="p">Printer: </Typography>
@@ -80,14 +70,15 @@ class App extends Component {
               subheader="subheader"
             >
             </CardHeader>
+          <div style={{ height: '500px' }}>
           <ImageZoom
             image={{
               src: 'gazelle.jpg',
               alt: 'Gazelle Stomping',
               className: 'img',
-                style: { height: '300px' }
             }}
           />
+          </div>
             <CardContent>
               <Typography component="p">TD ID: </Typography>
               <Typography component="p">Printer: </Typography>

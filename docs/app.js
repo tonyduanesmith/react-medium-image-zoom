@@ -55,20 +55,17 @@ var App = function (_Component) {
               title: 'title',
               subheader: 'subheader'
             }),
-            _react2.default.createElement(_lib2.default, {
-              image: {
-                src: 'http://lorempixel.com/400/200/sports/1',
-                alt: 'Golden Gate Bridge',
-                className: 'img',
-                style: { height: '300px' }
-              },
-              zoomImage: {
-                src: 'http://lorempixel.com/400/200/sports/1',
-                alt: 'Golden Gate Bridge',
-                className: 'img--zoomed',
-                style: { height: '300px' }
-              }
-            }),
+            _react2.default.createElement(
+              'div',
+              { style: { height: '500px' } },
+              _react2.default.createElement(_lib2.default, {
+                image: {
+                  src: 'http://lorempixel.com/400/200/sports/1',
+                  alt: 'Golden Gate Bridge',
+                  className: 'img'
+                }
+              })
+            ),
             _react2.default.createElement(
               _core.CardContent,
               null,
@@ -105,19 +102,17 @@ var App = function (_Component) {
               title: 'title',
               subheader: 'subheader'
             }),
-            _react2.default.createElement(_lib2.default, {
-              image: {
-                src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_4009420e28.jpg',
-                alt: 'Picture of Mt. Cook in New Zealand',
-                className: 'img',
-                style: { height: '300px' }
-              },
-              zoomImage: {
-                src: 'http://brokenlink.jpg',
-                alt: 'Golden Gate Bridge',
-                className: 'img--zoomed'
-              }
-            }),
+            _react2.default.createElement(
+              'div',
+              { style: { height: '500px' } },
+              _react2.default.createElement(_lib2.default, {
+                image: {
+                  src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_4009420e28.jpg',
+                  alt: 'Picture of Mt. Cook in New Zealand',
+                  className: 'img'
+                }
+              })
+            ),
             _react2.default.createElement(
               _core.CardContent,
               null,
@@ -154,14 +149,17 @@ var App = function (_Component) {
               title: 'title',
               subheader: 'subheader'
             }),
-            _react2.default.createElement(_lib2.default, {
-              image: {
-                src: 'gazelle.jpg',
-                alt: 'Gazelle Stomping',
-                className: 'img',
-                style: { height: '300px' }
-              }
-            }),
+            _react2.default.createElement(
+              'div',
+              { style: { height: '500px' } },
+              _react2.default.createElement(_lib2.default, {
+                image: {
+                  src: 'gazelle.jpg',
+                  alt: 'Gazelle Stomping',
+                  className: 'img'
+                }
+              })
+            ),
             _react2.default.createElement(
               _core.CardContent,
               null,
@@ -580,7 +578,8 @@ var ImageZoom = function (_Component) {
           height: '100%',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          objectFit: 'contain'
         },
         centerIcon: {
           position: 'absolute',
