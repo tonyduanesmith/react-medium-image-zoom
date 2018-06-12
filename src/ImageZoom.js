@@ -1,8 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { bool, func, object, shape, string } from 'prop-types'
 import defaults from './defaults'
 import { isMaxDimension } from './helpers'
 import { isEnterOrSpaceBarKey } from './keyboardEvents'
+import CircularProgress from '@material-ui/core/CircularProgress'
+import grey from '@material-ui/core/colors/grey'
+import BrokenImage from '@material-ui/icons/BrokenImage'
 
 import EventsWrapper from './EventsWrapper'
 import Zoom from './Zoom'
@@ -18,7 +21,9 @@ export default class ImageZoom extends Component {
     this.state = {
       isMaxDimension: false,
       isZoomed: false,
-      src: props.image.src
+      src: props.image.src,
+      imageError: false,
+      imageLoaded: false
     }
 
     this._handleZoom = this._handleZoom.bind(this)
@@ -99,6 +104,30 @@ export default class ImageZoom extends Component {
     const { image } = this.props
     const { isMaxDimension, src } = this.state
 
+    const imageTransition = {
+      opacity: !this.state.imageLoaded ? 0 : 1,
+      filterBrightness: !this.state.imageLoaded ? 0 : 100,
+      filterSaturate: !this.state.imageLoaded ? 20 : 100,
+      transition:
+        'filterBrightness 2.5s cubic-bezier(0.4, 0.0, 0.2, 1), filterSaturate 3s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 2s cubic-bezier(0.4, 0.0, 0.2, 1)'
+    }
+
+    const styles = {
+      root: {
+        position: 'relative'
+      },
+      image: {
+        ...imageTransition
+      },
+      center: {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }
+    }
+
     /**
      * Take whatever attributes you want to pass the image
      * and then override with the properties we need,
@@ -123,14 +152,29 @@ export default class ImageZoom extends Component {
       : this.state.isZoomed
 
     return [
-      <img
-        key="image"
-        ref={x => {
-          this.image = x
-        }}
-        onLoad={this._handleLoad}
-        {...attrs}
-      />,
+      <Fragment key="1">
+        <div style={styles.center}>
+          <img
+            key="image"
+            ref={x => {
+              this.image = x
+            }}
+            onLoad={this._handleLoad}
+            {...attrs}
+            onError={() => this.setState({ imageError: true })}
+            style={styles.image}
+          />
+          {!this.state.imageLoaded &&
+            !this.state.imageError &&
+              <div style={styles.center}>
+                <CircularProgress size={48} />
+              </div>
+            }
+          {this.state.imageError &&
+            <BrokenImage style={{ width: 48, height: 48, color: grey[300] }} />
+          }
+        </div>
+      </Fragment>,
       this.image && (isZoomed || this.isClosing) ?
         <EventsWrapper
           key="portal"
@@ -192,6 +236,7 @@ export default class ImageZoom extends Component {
    */
   _handleLoad() {
     this._checkShouldDisableComponent()
+    this.setState({ imageLoaded: true })
   }
 
   _handleKeyDown(e) {

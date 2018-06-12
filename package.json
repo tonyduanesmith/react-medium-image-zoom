@@ -76,7 +76,12 @@
     "lint-staged": "^4.2.1",
     "nodemon": "^1.11.0",
     "prettier": "^1.7.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^1.2.1",
+    "@material-ui/icons": "^1.1.0",
+    "material-ui-image": "^3.0.0"
   }
 }
