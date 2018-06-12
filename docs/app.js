@@ -593,9 +593,7 @@ var ImageZoom = function (_Component) {
           justifyContent: 'center'
         },
         imageEle: {
-          maxWidth: '100% !important',
-          display: 'block',
-          margin: '0 auto'
+          width: !this.state.imageLoaded ? '0px' : '50px'
 
           /**
            * Take whatever attributes you want to pass the image
@@ -613,6 +611,7 @@ var ImageZoom = function (_Component) {
       var isZoomed = isControlled(this.props.isZoomed) ? this.props.isZoomed : this.state.isZoomed;
 
       return [_react2.default.createElement(_react.Fragment, { key: '1' }, _react2.default.createElement('div', { style: styles.center }, _react2.default.createElement('div', { style: styles.image }, _react2.default.createElement('img', _extends({
+        style: styles.imageEle,
         key: 'image',
         ref: function ref(x) {
           _this2.image = x;

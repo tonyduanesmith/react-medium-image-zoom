@@ -139,9 +139,7 @@ export default class ImageZoom extends Component {
         justifyContent: 'center'
       },
       imageEle: {
-        maxWidth: '100% !important',
-        display: 'block',
-        margin: '0 auto'
+        width: !this.state.imageLoaded ? '0px' : '50px',
       }
     }
 
@@ -173,6 +171,7 @@ export default class ImageZoom extends Component {
         <div style={styles.center}>
           <div style={styles.image}>
             <img
+              style={styles.imageEle}
               key="image"
               ref={x => {
                 this.image = x
