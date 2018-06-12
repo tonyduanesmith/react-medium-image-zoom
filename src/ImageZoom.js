@@ -40,7 +40,7 @@ export default class ImageZoom extends Component {
       defaultStyles: {
         zoomContainer: {},
         overlay: {},
-        image: {},
+        image: { width: '100%' },
         zoomImage: {}
       },
       shouldHandleZoom: () => true,
@@ -138,7 +138,7 @@ export default class ImageZoom extends Component {
         justifyContent: 'center'
       },
       imageEle: {
-        maxWidth: '100%',
+        maxWidth: '100% !important',
         display: 'block',
         margin: '0 auto'
       }
@@ -172,7 +172,6 @@ export default class ImageZoom extends Component {
         <div style={styles.center}>
           <div style={styles.image}>
             <img
-              style={styles.imageEle}
               key="image"
               ref={x => {
                 this.image = x
