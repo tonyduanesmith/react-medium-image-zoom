@@ -139,6 +139,8 @@ export default class ImageZoom extends Component {
       },
       imageEle: {
         maxWidth: '100%',
+        display: 'block',
+        margin: '0 auto'
       }
     }
 

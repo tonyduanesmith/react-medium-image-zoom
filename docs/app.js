@@ -592,7 +592,9 @@ var ImageZoom = function (_Component) {
           justifyContent: 'center'
         },
         imageEle: {
-          maxWidth: '100%'
+          maxWidth: '100%',
+          display: 'block',
+          margin: '0 auto'
 
           /**
            * Take whatever attributes you want to pass the image
