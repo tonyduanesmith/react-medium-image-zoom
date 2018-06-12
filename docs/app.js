@@ -42,46 +42,104 @@ var App = function (_Component) {
         { container: true, spacer: 40 },
         _react2.default.createElement(
           _core.Grid,
-          { item: true, xs: 4 },
-          _react2.default.createElement(_lib2.default, {
-            image: {
-              src: 'http://lorempixel.com/400/200/sports/1',
-              alt: 'Golden Gate Bridge',
-              className: 'img'
-            },
-            zoomImage: {
-              src: 'http://lorempixel.com/400/200/sports/1',
-              alt: 'Golden Gate Bridge',
-              className: 'img--zoomed'
-            }
-          })
+          { item: true, xs: 12, sm: 6, md: 4, lg: 3, xl: 2 },
+          _react2.default.createElement(
+            _core.Card,
+            null,
+            _react2.default.createElement(_core.CardHeader, {
+              avatar: _react2.default.createElement(
+                _core.Avatar,
+                null,
+                'TS'
+              ),
+              title: 'title',
+              subheader: 'subheader'
+            }),
+            _react2.default.createElement(_lib2.default, {
+              image: {
+                src: 'http://lorempixel.com/400/200/sports/1',
+                alt: 'Golden Gate Bridge',
+                className: 'img'
+              },
+              zoomImage: {
+                src: 'http://lorempixel.com/400/200/sports/1',
+                alt: 'Golden Gate Bridge',
+                className: 'img--zoomed'
+              }
+            })
+          )
         ),
         _react2.default.createElement(
           _core.Grid,
-          { item: true, xs: 4 },
-          _react2.default.createElement(_lib2.default, {
-            image: {
-              src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_400942028.jpg',
-              alt: 'Picture of Mt. Cook in New Zealand',
-              className: 'img'
-            },
-            zoomImage: {
-              src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_400942028.jpg',
-              alt: 'Golden Gate Bridge',
-              className: 'img--zoomed'
-            }
-          })
+          { item: true, xs: 12, sm: 6, md: 4, lg: 3, xl: 2 },
+          _react2.default.createElement(
+            _core.Card,
+            null,
+            _react2.default.createElement(_core.CardHeader, {
+              avatar: _react2.default.createElement(
+                _core.Avatar,
+                null,
+                'TS'
+              ),
+              title: 'title',
+              subheader: 'subheader'
+            }),
+            _react2.default.createElement(_lib2.default, {
+              image: {
+                src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_400942028.jpg',
+                alt: 'Picture of Mt. Cook in New Zealand',
+                className: 'img'
+              },
+              zoomImage: {
+                src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_400942028.jpg',
+                alt: 'Golden Gate Bridge',
+                className: 'img--zoomed'
+              }
+            }),
+            _react2.default.createElement(
+              _core.CardContent,
+              null,
+              _react2.default.createElement(
+                _core.Typography,
+                { component: 'p' },
+                'TD ID: '
+              ),
+              _react2.default.createElement(
+                _core.Typography,
+                { component: 'p' },
+                'Printer: '
+              ),
+              _react2.default.createElement(
+                _core.Typography,
+                { component: 'p' },
+                'Project: '
+              )
+            )
+          )
         ),
         _react2.default.createElement(
           _core.Grid,
-          { item: true, xs: 4 },
-          _react2.default.createElement(_lib2.default, {
-            image: {
-              src: 'gazelle.jpg',
-              alt: 'Gazelle Stomping',
-              className: 'img'
-            }
-          })
+          { item: true, xs: 12, sm: 6, md: 4, lg: 3, xl: 2 },
+          _react2.default.createElement(
+            _core.Card,
+            null,
+            _react2.default.createElement(_core.CardHeader, {
+              avatar: _react2.default.createElement(
+                _core.Avatar,
+                null,
+                'TS'
+              ),
+              title: 'title',
+              subheader: 'subheader'
+            }),
+            _react2.default.createElement(_lib2.default, {
+              image: {
+                src: 'gazelle.jpg',
+                alt: 'Gazelle Stomping',
+                className: 'img'
+              }
+            })
+          )
         )
       );
     }
@@ -473,7 +531,7 @@ var ImageZoom = function (_Component) {
       var styles = {
         image: _extends({}, imageTransition),
         center: {
-          position: 'absolute',
+          position: 'relative',
           top: '0px',
           left: '0px',
           width: '100%',
