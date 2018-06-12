@@ -113,9 +113,6 @@ export default class ImageZoom extends Component {
     }
 
     const styles = {
-      root: {
-        position: 'relative'
-      },
       image: {
         ...imageTransition
       },

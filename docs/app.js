@@ -471,9 +471,6 @@ var ImageZoom = function (_Component) {
       };
 
       var styles = {
-        root: {
-          position: 'relative'
-        },
         image: _extends({}, imageTransition),
         center: {
           position: 'absolute',
