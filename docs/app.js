@@ -59,14 +59,35 @@ var App = function (_Component) {
               image: {
                 src: 'http://lorempixel.com/400/200/sports/1',
                 alt: 'Golden Gate Bridge',
-                className: 'img'
+                className: 'img',
+                style: { height: '300px' }
               },
               zoomImage: {
                 src: 'http://lorempixel.com/400/200/sports/1',
                 alt: 'Golden Gate Bridge',
-                className: 'img--zoomed'
+                className: 'img--zoomed',
+                style: { height: '300px' }
               }
-            })
+            }),
+            _react2.default.createElement(
+              _core.CardContent,
+              null,
+              _react2.default.createElement(
+                _core.Typography,
+                { component: 'p' },
+                'TD ID: '
+              ),
+              _react2.default.createElement(
+                _core.Typography,
+                { component: 'p' },
+                'Printer: '
+              ),
+              _react2.default.createElement(
+                _core.Typography,
+                { component: 'p' },
+                'Project: '
+              )
+            )
           )
         ),
         _react2.default.createElement(
@@ -86,12 +107,13 @@ var App = function (_Component) {
             }),
             _react2.default.createElement(_lib2.default, {
               image: {
-                src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_400942028.jpg',
+                src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_4009420e28.jpg',
                 alt: 'Picture of Mt. Cook in New Zealand',
-                className: 'img'
+                className: 'img',
+                style: { height: '300px' }
               },
               zoomImage: {
-                src: 'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_400942028.jpg',
+                src: 'http://brokenlink.jpg',
                 alt: 'Golden Gate Bridge',
                 className: 'img--zoomed'
               }
@@ -136,9 +158,29 @@ var App = function (_Component) {
               image: {
                 src: 'gazelle.jpg',
                 alt: 'Gazelle Stomping',
-                className: 'img'
+                className: 'img',
+                style: { height: '300px' }
               }
-            })
+            }),
+            _react2.default.createElement(
+              _core.CardContent,
+              null,
+              _react2.default.createElement(
+                _core.Typography,
+                { component: 'p' },
+                'TD ID: '
+              ),
+              _react2.default.createElement(
+                _core.Typography,
+                { component: 'p' },
+                'Printer: '
+              ),
+              _react2.default.createElement(
+                _core.Typography,
+                { component: 'p' },
+                'Project: '
+              )
+            )
           )
         )
       );
@@ -539,6 +581,16 @@ var ImageZoom = function (_Component) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
+        },
+        centerIcon: {
+          position: 'absolute',
+          top: '0px',
+          left: '0px',
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
 
           /**
            * Take whatever attributes you want to pass the image
@@ -565,7 +617,7 @@ var ImageZoom = function (_Component) {
         onError: function onError() {
           return _this2.setState({ imageError: true });
         }
-      }))), !this.state.imageLoaded && !this.state.imageError && _react2.default.createElement('div', { style: styles.center }, _react2.default.createElement(_CircularProgress2.default, { size: 48 })), this.state.imageError && _react2.default.createElement('div', { style: styles.center }, _react2.default.createElement(_BrokenImage2.default, { style: { width: 48, height: 48, color: _grey2.default[300] } })))), this.image && (isZoomed || this.isClosing) ? _react2.default.createElement(_EventsWrapper2.default, {
+      }))), !this.state.imageLoaded && !this.state.imageError && _react2.default.createElement('div', { style: styles.centerI }, _react2.default.createElement(_CircularProgress2.default, { size: 48 })), this.state.imageError && _react2.default.createElement('div', { style: styles.centerIcon }, _react2.default.createElement(_BrokenImage2.default, { style: { width: 48, height: 48, color: _grey2.default[300] } })))), this.image && (isZoomed || this.isClosing) ? _react2.default.createElement(_EventsWrapper2.default, {
         key: 'portal',
         ref: function ref(node) {
           _this2.portalInstance = node;

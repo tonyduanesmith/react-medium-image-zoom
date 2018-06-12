@@ -22,13 +22,20 @@ class App extends Component {
               src: 'http://lorempixel.com/400/200/sports/1',
               alt: 'Golden Gate Bridge',
               className: 'img',
+                style: { height: '300px' }
             }}
             zoomImage={{
               src: 'http://lorempixel.com/400/200/sports/1',
               alt: 'Golden Gate Bridge',
-              className: 'img--zoomed'
+              className: 'img--zoomed',
+              style: { height: '300px' }
             }}
           />
+            <CardContent>
+              <Typography component="p">TD ID: </Typography>
+              <Typography component="p">Printer: </Typography>
+              <Typography component="p">Project: </Typography>
+            </CardContent>
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
@@ -44,13 +51,14 @@ class App extends Component {
           <ImageZoom
             image={{
               src:
-                'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_400942028.jpg',
+                'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_4009420e28.jpg',
               alt: 'Picture of Mt. Cook in New Zealand',
-              className: 'img'
+              className: 'img',
+              style: { height: '300px' }
             }}
             zoomImage={{
               src:
-                'http://www.printerspec.co.uk/akzonobelimagedatabase/IDBImages/100947007_400942028.jpg',
+                'http://brokenlink.jpg',
               alt: 'Golden Gate Bridge',
               className: 'img--zoomed'
             }}
@@ -76,9 +84,15 @@ class App extends Component {
             image={{
               src: 'gazelle.jpg',
               alt: 'Gazelle Stomping',
-              className: 'img'
+              className: 'img',
+                style: { height: '300px' }
             }}
           />
+            <CardContent>
+              <Typography component="p">TD ID: </Typography>
+              <Typography component="p">Printer: </Typography>
+              <Typography component="p">Project: </Typography>
+            </CardContent>
           </Card>
         </Grid>
       </Grid>

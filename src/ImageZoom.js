@@ -125,6 +125,16 @@ export default class ImageZoom extends Component {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
+      },
+      centerIcon: {
+        position: 'absolute',
+        top: '0px',
+        left: '0px',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
       }
     }
 
@@ -167,12 +177,12 @@ export default class ImageZoom extends Component {
           </div>
           {!this.state.imageLoaded &&
             !this.state.imageError &&
-              <div style={styles.center}>
+              <div style={styles.centerI}>
                 <CircularProgress size={48} />
               </div>
             }
           {this.state.imageError &&
-            <div style={styles.center}>
+            <div style={styles.centerIcon}>
               <BrokenImage style={{ width: 48, height: 48, color: grey[300] }} />
             </div>
           }
