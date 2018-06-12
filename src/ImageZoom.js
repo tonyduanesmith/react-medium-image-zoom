@@ -154,16 +154,17 @@ export default class ImageZoom extends Component {
     return [
       <Fragment key="1">
         <div style={styles.center}>
-          <img
-            key="image"
-            ref={x => {
-              this.image = x
-            }}
-            onLoad={this._handleLoad}
-            {...attrs}
-            onError={() => this.setState({ imageError: true })}
-            style={styles.image}
-          />
+          <div style={styles.image}>
+            <img
+              key="image"
+              ref={x => {
+                this.image = x
+              }}
+              onLoad={this._handleLoad}
+              {...attrs}
+              onError={() => this.setState({ imageError: true })}
+            />
+          </div>
           {!this.state.imageLoaded &&
             !this.state.imageError &&
               <div style={styles.center}>
