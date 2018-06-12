@@ -120,6 +120,9 @@ export default class ImageZoom extends Component {
         ...imageTransition
       },
       center: {
+        position: 'relative',
+        top: '0px',
+        left: '0px',
         width: '100%',
         height: '100%',
         display: 'flex',
@@ -172,7 +175,9 @@ export default class ImageZoom extends Component {
               </div>
             }
           {this.state.imageError &&
-            <BrokenImage style={{ width: 48, height: 48, color: grey[300] }} />
+            <div style={styles.center}>
+              <BrokenImage style={{ width: 48, height: 48, color: grey[300] }} />
+            </div>
           }
         </div>
       </Fragment>,
