@@ -120,7 +120,7 @@ export default class ImageZoom extends Component {
         ...imageTransition
       },
       center: {
-        position: 'relative',
+        position: 'absolute',
         top: '0px',
         left: '0px',
         width: '100%',
