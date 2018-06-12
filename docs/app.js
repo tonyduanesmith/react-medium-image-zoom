@@ -563,7 +563,7 @@ var ImageZoom = function (_Component) {
 
       var imageTransition = {
         opacity: !this.state.imageLoaded ? 0 : 1,
-        width: !this.state.imageLoaded ? '0px' : '50px',
+        width: !this.state.imageLoaded ? '0%' : '100%',
         filterBrightness: !this.state.imageLoaded ? 0 : 100,
         filterSaturate: !this.state.imageLoaded ? 20 : 100,
         transition: 'filterBrightness 2.5s cubic-bezier(0.4, 0.0, 0.2, 1), filterSaturate 3s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 2s cubic-bezier(0.4, 0.0, 0.2, 1)'
@@ -593,7 +593,7 @@ var ImageZoom = function (_Component) {
           justifyContent: 'center'
         },
         imageEle: {
-          width: !this.state.imageLoaded ? '0px' : '50px'
+          width: !this.state.imageLoaded ? '0%' : '100%'
 
           /**
            * Take whatever attributes you want to pass the image
