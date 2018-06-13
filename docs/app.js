@@ -39,7 +39,7 @@ var App = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _core.Grid,
-        { container: true, spacer: 40 },
+        { container: true, spacing: 40 },
         _react2.default.createElement(
           _core.Grid,
           { item: true, xs: 12, sm: 6, md: 4, lg: 3, xl: 2 },
@@ -619,8 +619,8 @@ var ImageZoom = function (_Component) {
       }, attrs, {
         onError: function onError() {
           return _this2.setState({ imageError: true });
-        },
-        style: styles.imageEle
+        }
+        // style={styles.imageEle}
       }))), !this.state.imageLoaded && !this.state.imageError && _react2.default.createElement('div', { style: styles.centerI }, _react2.default.createElement(_CircularProgress2.default, { size: 48 })), this.state.imageError && _react2.default.createElement('div', { style: styles.centerIcon }, _react2.default.createElement(_BrokenImage2.default, { style: { width: 48, height: 48, color: _grey2.default[300] } })))), this.image && (isZoomed || this.isClosing) ? _react2.default.createElement(_EventsWrapper2.default, {
         key: 'portal',
         ref: function ref(node) {

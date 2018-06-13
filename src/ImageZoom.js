@@ -178,7 +178,7 @@ export default class ImageZoom extends Component {
               onLoad={this._handleLoad}
               {...attrs}
               onError={() => this.setState({ imageError: true })}
-              style={styles.imageEle}
+              // style={styles.imageEle}
             />
           </div>
           {!this.state.imageLoaded &&

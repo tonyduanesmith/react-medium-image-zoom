@@ -6,7 +6,7 @@ import ImageZoom from '../../lib'
 class App extends Component {
   render() {
     return (
-      <Grid container spacer={40}>
+      <Grid container spacing={40}>
         <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
           <Card>
             <CardHeader
