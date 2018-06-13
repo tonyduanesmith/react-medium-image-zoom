@@ -240,7 +240,7 @@ export default class ImageZoom extends Component {
 
     return Object.assign(
       {},
-      defaults.styles.image && { width: !this.state.imageLoaded ? '0%' : '100%' },
+      defaults.styles.image && { width: !this.state.imageLoaded ? '0%' : '100%', cursor: 'zoom-in' },
       style,
       this.props.defaultStyles.image,
       this.props.image.style,

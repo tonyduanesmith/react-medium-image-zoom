@@ -660,7 +660,7 @@ var ImageZoom = function (_Component) {
       var isHidden = this.state.isZoomed || this.props.isZoomed || this.isClosing;
       var style = _extends({}, isHidden && { visibility: 'hidden' });
 
-      return _extends({}, _defaults2.default.styles.image && { width: !this.state.imageLoaded ? '0%' : '100%' }, style, this.props.defaultStyles.image, this.props.image.style, this.state.isMaxDimension && { cursor: 'inherit' });
+      return _extends({}, _defaults2.default.styles.image && { width: !this.state.imageLoaded ? '0%' : '100%', cursor: 'zoom-in' }, style, this.props.defaultStyles.image, this.props.image.style, this.state.isMaxDimension && { cursor: 'inherit' });
     }
 
     /**
